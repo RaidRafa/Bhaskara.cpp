@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+// Programa para calcular Bhaskara
+
+double A, B, C, X1, X2, delta;
+
+int main(){
+	
+	setlocale(LC_ALL, "Portuguese");
+	
+	printf("Digite o valor de A:\n");
+	scanf("%lf", &A);
+	
+	printf("Digite o valor de B:\n");
+	scanf("%lf", &B);
+	
+	printf("Digite o valor de C:\n");
+	scanf("%lf", &C);
+	
+	delta = B*B-4*A*C;
+	
+	if(delta < 0){
+		printf("N�o h� raizes reais");
+	}else {
+			X1 = (-B + sqrt(delta))/(2*A);
+			X2 = (-B - sqrt(delta))/(2*A);
+			printf("As raizes s�o %.2f e %.2f", X1, X2);
+		}	
+}
+	
